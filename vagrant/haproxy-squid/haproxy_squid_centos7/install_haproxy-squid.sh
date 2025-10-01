@@ -30,6 +30,7 @@ then
         echo "###################################################"
         docker run -d --name red -p 8080:8080 -e APP_COLOR=red kodekloud/webapp-color
         docker run -d --name blue -p 8081:8080 -e APP_COLOR=blue kodekloud/webapp-color
+        rm -rf /home/vagrant/haproxy-training
         git clone https://github.com/eazytraining/haproxy-training.git /home/vagrant/haproxy-training
         cd /home/vagrant/haproxy-training/TP0 || exit 1
 
