@@ -32,7 +32,7 @@ then
         docker run -d --name blue -p 8081:8080 -e APP_COLOR=blue kodekloud/webapp-color
         
         git clone https://github.com/eazytraining/haproxy-training.git /home/vagrant/haproxy-training
-        cd /home/vagrant/haproxy-training/TP0 || exit 1
+        cd /home/vagrant/haproxy-training/
 
         docker build -t site1  ./site1/
         docker run -d --name site1 -p 81:80 site1
