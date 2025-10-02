@@ -31,8 +31,9 @@ then
         docker run -d --name red -p 8080:8080 -e APP_COLOR=red kodekloud/webapp-color
         docker run -d --name blue -p 8081:8080 -e APP_COLOR=blue kodekloud/webapp-color
         
-        git clone https://github.com/hermannbrice12/cursus-devops.git /home/vagrant/haproxy-training
-        cd /home/vagrant/haproxy-training/
+      [ ! -d "haproxy-training" ] && git clone https://github.com/eazytraining/haproxy-training.git
+      cd "haproxy-training/TP0 - Deploiement de l'infrastructure de labs"
+
 
         docker build -t site1  ./site1/
         docker run -d --name site1 -p 81:80 site1
